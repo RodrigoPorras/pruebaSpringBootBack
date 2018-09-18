@@ -46,6 +46,19 @@ public class PublicacionController {
 		return this.publicacionService.FindAll();
 	}
 	
+	@RequestMapping(value ="/deletePublicacion", method = RequestMethod.POST)
+	public void deletePublicacion(@RequestBody String publicacionJson) 
+			throws JsonParseException, JsonMappingException, IOException,Exception{
+		this.mapper = new ObjectMapper();
+		
+		Publicacion publicacion = this.mapper.readValue(publicacionJson, Publicacion.class);
+		
+		if(publicacion.getId() == null){
+			throw new Exception("El Id está nulo");
+		}
+		this.publicacionService.deletePubliacion(publicacion.getId());
+	}
+	
 	private boolean validate(Publicacion publicacion){
 		boolean isValid = true;
 		if(StringUtils.trimToNull(publicacion.getTitulo())== null){

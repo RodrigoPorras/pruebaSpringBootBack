@@ -23,4 +23,9 @@ public class PublicacionServiceImpl implements PublicacionService {
 	public List<Publicacion> FindAll() {
 		return this.publicacionRepository.findAll();
 	}
+
+	@Override
+	public void deletePubliacion(Long id) {
+		this.publicacionRepository.deleteById(id);
+	}
 }

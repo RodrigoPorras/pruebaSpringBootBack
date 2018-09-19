@@ -70,7 +70,7 @@ public class PublicacionController {
 			System.out.println("getContenido false");
 		}
 		
-		if(StringUtils.trimToNull(publicacion.getFechaPublicación())== null){
+		if(StringUtils.trimToNull(publicacion.getFechaPublicacion())== null){
 			isValid = false;
 			System.out.println("getFechaPublicación false");
 		}

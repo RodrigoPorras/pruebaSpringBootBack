@@ -22,7 +22,7 @@ public class Publicacion extends ParentEntity {
 	@Column(name = "link_imagen",nullable=true,length=255)
 	private String linkImagen;
 	
-	@Column(name = "fecha_publicación")
+	@Column(name = "fecha_publicacion")
 	private String fechaPublicacion; 
 	
 	@Column(name = "link",nullable=true)
@@ -53,10 +53,10 @@ public class Publicacion extends ParentEntity {
 	public void setLinkImagen(String linkImagen) {
 		this.linkImagen = linkImagen;
 	}
-	public String getFechaPublicación() {
+	public String getFechaPublicacion() {
 		return fechaPublicacion;
 	}
-	public void setFechaPublicación(String fechaPublicación) {
+	public void setFechaPublicacion(String fechaPublicación) {
 		this.fechaPublicacion = fechaPublicación;
 	}
 	public String getLink() {
